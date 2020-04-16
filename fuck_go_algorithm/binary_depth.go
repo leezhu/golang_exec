@@ -22,3 +22,12 @@ func max_depth(root *TreeNode,depth int) {
 	//右节点
 	max_depth(root.Right, depth+1)
 }
+
+//自底向上
+func max_depth_end_to_top(root *TreeNode)(depth int){
+	if root==nil
+		return 0
+	left_depth:=max_depth_end_to_top(root.Left)
+	right_depth:=max_depth_end_to_top(root.Right)
+	return math.Max(left_depth, right_depth)+1
+}
