@@ -27,6 +27,9 @@ type admin struct {
 	level string
 }
 
+func (a *admin) notify() {
+	fmt.Printf("Sending admin,name=%s,email=%s", a.name, a.email)
+}
 func sendNotification3(n notifier4) {
 	n.notify()
 }
@@ -39,5 +42,7 @@ func main() {
 		},
 		level: "1",
 	}
+	// sendNotification3(ad.user)
+	//如果外部类型实现了接口方法，那么就不会使用嵌入
 	sendNotification3(&ad)
 }
