@@ -18,7 +18,7 @@ type user struct {
 }
 
 //notify是使用指针接收者实现的方法
-func (u *user) notify() {
+func (u *user) notify() {45
 	fmt.Printf("sending user email to %s<%s>", u.name, u.email)
 }
 

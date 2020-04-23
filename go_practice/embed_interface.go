@@ -33,6 +33,7 @@ func (a *admin) notify() {
 func sendNotification3(n notifier4) {
 	n.notify()
 }
+//我的
 
 func main() {
 	ad := admin{
