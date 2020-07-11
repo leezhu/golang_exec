@@ -69,7 +69,7 @@ func main() {
 	//下载协程：源源不断地从管道中获取地址并下载
 	for i := 0; i < 10; i++ {
 		waitGroup.Add(1)
-		go DownloadImg()
+		// go DownloadImg()
 	}
 	waitGroup.Wait()
 }
